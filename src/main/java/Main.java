@@ -1,5 +1,37 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
+        testMatrix();
+        testMatrixSkal();
+    }
+
+    public static void testMatrix() {
+        Matrix<Integer> matrix1 = new Matrix<>(2, 2);
+        Matrix<Double> matrix2 = new Matrix<>(2, 2);
+
+        matrix1.set(0, 0, 1);
+        matrix1.set(0, 1, 2);
+        matrix1.set(1, 0, 3);
+        matrix1.set(1, 1, 4);
+
+        matrix2.set(0, 0, 5.0);
+        matrix2.set(0, 1, 6.0);
+        matrix2.set(1, 0, 7.0);
+        matrix2.set(1, 1, 8.0);
+
+        Matrix<Double> result = matrix1.add(matrix2);
+
+        System.out.println(result);
+    }
+    public static void testMatrixSkal() {
+        Matrix<Integer> matrix1 = new Matrix<>(2, 2);
+
+        matrix1.set(0, 0, 1);
+        matrix1.set(0, 1, 2);
+        matrix1.set(1, 0, 3);
+        matrix1.set(1, 1, 4);
+
+        Matrix<Integer> result = matrix1.skal(5);
+
+        System.out.println(result);
     }
 }
